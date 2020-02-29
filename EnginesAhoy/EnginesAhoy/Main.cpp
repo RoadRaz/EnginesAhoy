@@ -6,16 +6,18 @@
 // See LICENSE in root directory for full details.
 // ----------------------------------------------------------------
 
-#include "Game.h"
+#include <iostream>
+#include "Engine.h"
 
 int main(int argc, char** argv)
 {
-	Game game;
-	bool success = game.Initialize();
-	if (success)
-	{
-		game.RunLoop();
+	Engine::GetInstance()->Init();
+
+	while (Engine::GetInstance()->IsRunning()) {
+		Engine::GetInstance()->Events();
+		Engine::GetInstance()->Update();
+		Engine::GetInstance()->Render();
 	}
-	game.Shutdown();
+	Engine::GetInstance()->Clean();
 	return 0;
 }
