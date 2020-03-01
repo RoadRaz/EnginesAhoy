@@ -31,7 +31,7 @@ public:
 	}
 
 	//Multiplication
-	inline Vector2D operator-(const float scalar) const {
+	inline Vector2D operator*(const float scalar) const {
 		return Vector2D(X*scalar, Y*scalar);
 	}
 

@@ -23,7 +23,7 @@ public:
 		std::cout << msg << "(X,Y) = (" << X << "," << Y << ")" << std::endl;
 	}
 
-private:
+public:
 	inline void TranslateX(float x) { X += x; }
 	inline void TranslateY(float y) { Y += y; }
 	inline void Translate(Vector2D v) {

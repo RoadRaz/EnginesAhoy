@@ -28,9 +28,13 @@ bool Engine::Init() {
 		return false;
 	}
 
+	SDL_RendererInfo info;
+	SDL_GetRendererInfo(m_Renderer, &info);
+	std::cout << ("%s", info.name);
+
 	TextureManager::GetInstance()->Load("player", "Assets/Fumiko.png");
 
-	player = new Warrior(new Properties("player", 500, 500, 24, 32));
+	player = new Warrior(new Properties("player", 500, 100, 24, 32));
 
 	return m_IsRunning = true;
 }
