@@ -11,7 +11,7 @@ class Engine {
 public:
 	
 	static Engine* GetInstance() {
-		return s_instance = (s_instance != nullptr) ? s_instance : new Engine();
+		return s_Instance = (s_Instance != nullptr) ? s_Instance : new Engine();
 	}
 
 	bool Init();
@@ -34,7 +34,7 @@ private:
 	SDL_Window* m_Window;
 	SDL_Renderer* m_Renderer;
 
-	static Engine* s_instance;
+	static Engine* s_Instance;
 };
 
 #endif //Engine_h

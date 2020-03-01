@@ -1,0 +1,2 @@
+Fumiko width = 24
+Fumiko height = 32
