@@ -30,14 +30,14 @@ void TextureManager::Draw(std::string id, int x, int y, int width, int height, S
 	SDL_RenderCopyEx(Engine::GetInstance()->GetRenderer(), m_TextureMap[id], &srcRect, &dstRect, 0, nullptr, flip);
 }
 
-void TextureManager::DrawFrameRow(std::string id, int x, int y, int width, int height, int row, int frame, SDL_RendererFlip flip) {
-	SDL_Rect srcRect = { width*frame, height*(row-1), width, height };
+void TextureManager::DrawFrameRow(std::string id, int x, int y, int width, int height, int row, int frame, int frameOffset, SDL_RendererFlip flip) {
+	SDL_Rect srcRect = { width*(frame+frameOffset), height*(row-1), width, height };
 	SDL_Rect dstRect = { x, y, width, height };
 	SDL_RenderCopyEx(Engine::GetInstance()->GetRenderer(), m_TextureMap[id], &srcRect, &dstRect, 0, nullptr, flip);
 }
 
-void TextureManager::DrawFrameColumn(std::string id, int x, int y, int width, int height, int column, int frame, SDL_RendererFlip flip) {
-	SDL_Rect srcRect = { width*(column-1), height*frame, width, height };
+void TextureManager::DrawFrameColumn(std::string id, int x, int y, int width, int height, int column, int frame, int frameOffset, SDL_RendererFlip flip) {
+	SDL_Rect srcRect = { width*(column-1), height*(frame+frameOffset), width, height };
 	SDL_Rect dstRect = { x, y, width, height };
 	SDL_RenderCopyEx(Engine::GetInstance()->GetRenderer(), m_TextureMap[id], &srcRect, &dstRect, 0, nullptr, flip);
 }

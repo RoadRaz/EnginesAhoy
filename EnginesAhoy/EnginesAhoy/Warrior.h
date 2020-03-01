@@ -2,6 +2,7 @@
 #ifndef Warrior_h
 #define Warrior_h
 #include "Character.h"
+#include "Animation.h"
 
 class Warrior : public Character {
 public:
@@ -12,7 +13,6 @@ public:
 	virtual void Clean();
 
 private:
-	int m_Row, m_Frame, m_FrameCount, m_Column, m_AnimSpeed;
-
+	Animation* m_Animation;
 };
 #endif // !Warrior_h
