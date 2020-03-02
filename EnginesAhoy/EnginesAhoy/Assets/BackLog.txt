@@ -1,0 +1,3 @@
+1. Change animation states abstraction higher
+	- Refactor animation map to character/GameObject
+	- Add animation manager functions to character/GameObject

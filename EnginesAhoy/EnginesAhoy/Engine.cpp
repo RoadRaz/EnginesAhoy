@@ -4,6 +4,7 @@
 #include "Vector2D.h"
 #include "Transform.h"
 #include "Warrior.h"
+#include "Input.h"
 
 Engine* Engine::s_Instance = nullptr;
 Warrior* player = nullptr;
@@ -68,13 +69,5 @@ void Engine::Render() {
 }
 
 void Engine::Events() {
-	SDL_Event event;
-	SDL_PollEvent(&event);
-	switch (event.type) {
-		case SDL_QUIT:
-			Quit();
-			break;
-		default:
-			break;
-	}
+	Input::GetInstance()->Listen();
 }

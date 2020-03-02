@@ -42,6 +42,12 @@
     <Filter Include="Header Files\Animation">
       <UniqueIdentifier>{7536d3ac-2c1b-4eeb-be3b-a2dfd440b2a8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Input">
+      <UniqueIdentifier>{53cfd67e-32d4-4e0a-b134-9c77dba806e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Input">
+      <UniqueIdentifier>{1d016885-6827-402b-8d56-45490236659f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -61,6 +67,9 @@
     </ClCompile>
     <ClCompile Include="Animation.cpp">
       <Filter>Source Files\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>Source Files\Input</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -99,6 +108,9 @@
     </ClInclude>
     <ClInclude Include="RigidBody.h">
       <Filter>Header Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>Header Files\Input</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

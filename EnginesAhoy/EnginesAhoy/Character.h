@@ -3,6 +3,8 @@
 #define Character_h
 #include "GameObject.h"
 #include "SDL.h"
+#include <map>
+#include <string>
 
 class Character : public GameObject {
 public:
