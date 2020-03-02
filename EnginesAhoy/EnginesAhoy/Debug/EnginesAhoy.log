@@ -1,1 +1,9 @@
-﻿  EnginesAhoy.vcxproj -> D:\Engines\EnginesAhoy\EnginesAhoy\Debug\EnginesAhoy.exe
+﻿  Engine.cpp
+D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\GameObject.h(12,7): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\GameObject.h(13,7): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  Warrior.cpp
+D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\GameObject.h(12,7): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\GameObject.h(13,7): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\Warrior.cpp(25,25): warning C4305: 'argument': truncation from 'double' to 'float'
+  Generating Code...
+  EnginesAhoy.vcxproj -> D:\Engines\EnginesAhoy\EnginesAhoy\Debug\EnginesAhoy.exe

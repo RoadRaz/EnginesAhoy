@@ -1,21 +1,13 @@
-﻿  Animation.cpp
-D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\Animation.cpp(10,63): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\Animation.cpp(10,60): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\Animation.cpp(13,66): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\Animation.cpp(13,63): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  Game.cpp
-  Engine.cpp
+﻿  Engine.cpp
 D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\GameObject.h(12,7): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
 D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\GameObject.h(13,7): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-  Input.cpp
-  Main.cpp
-  TextureManager.cpp
   Warrior.cpp
 D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\GameObject.h(12,7): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
 D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\GameObject.h(13,7): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\Warrior.cpp(26,25): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\Warrior.cpp(25,25): warning C4305: 'argument': truncation from 'double' to 'float'
   Generating code
-  Previous IPDB not found, fall back to full compilation.
-  All 338 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  7 of 336 functions ( 2.1%) were compiled, the rest were copied from previous compilation.
+    3 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   EnginesAhoy.vcxproj -> D:\Engines\EnginesAhoy\EnginesAhoy\Release\EnginesAhoy.exe

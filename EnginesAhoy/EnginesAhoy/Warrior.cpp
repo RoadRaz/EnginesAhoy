@@ -4,7 +4,6 @@
 
 Warrior::Warrior(Properties* props) : Character(props) {
 	m_RigidBody = new RigidBody();
-
 	Animation * idleAnimation = new Animation();
 	idleAnimation->SetProps(m_TextureID, 0, 17, 3, 0, 300, false, m_Flip);
 	AddAnimation("idle", idleAnimation);
@@ -41,25 +40,6 @@ void Warrior::Update(float dt) {
 	m_Animation->Update();
 }
 
-RigidBody* Warrior::GetRigidBody() {
-	return m_RigidBody;
-}
-
-void Warrior::AddAnimation(std::string key, Animation* animation) {
-	m_AnimationMap[key] = animation;
-}
-
-Animation* Warrior::GetAnimation(std::string key) {
-	return m_AnimationMap[key];
-}
-
-void Warrior::SetAnimation(Animation* animation) {
-	m_Animation = animation;
-}
-
-void Warrior::SetAnimation(std::string key) {
-	m_Animation = m_AnimationMap[key];
-}
 
 void Warrior::Clean() {
 	TextureManager::GetInstance()->Drop(m_TextureID);

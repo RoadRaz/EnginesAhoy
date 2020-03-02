@@ -1,3 +1,2 @@
-1. Change animation states abstraction higher
-	- Refactor animation map to character/GameObject
-	- Add animation manager functions to character/GameObject
+1. Decide abstraction layer for animations and rigidbody
+	- Currently in character. Move up or down?
