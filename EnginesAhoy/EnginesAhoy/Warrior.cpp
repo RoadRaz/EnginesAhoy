@@ -5,16 +5,18 @@
 Warrior::Warrior(Properties* props) : Character(props) {
 	m_RigidBody = new RigidBody();
 	Animation * idleAnimation = new Animation();
-	idleAnimation->SetProps(m_TextureID, 0, 17, 3, 0, 300, false, m_Flip);
+	idleAnimation->SetProps(m_TextureID, 0, 17, 3, 0, 100, false, m_Flip);
 	AddAnimation("idle", idleAnimation);
 	
 	Animation* moveLeftAnimation = new Animation();
-	moveLeftAnimation->SetProps(m_TextureID, 4, 0, 3, 3, 300, true, m_Flip);
+	moveLeftAnimation->SetProps(m_TextureID, 4, 0, 3, 3, 100, true, m_Flip);
 	AddAnimation("moveLeft", moveLeftAnimation);
 	
 	Animation* moveRightAnimation = new Animation();
-	moveRightAnimation->SetProps(m_TextureID, 2, 0, 3, 3, 300, true, m_Flip);
+	moveRightAnimation->SetProps(m_TextureID, 2, 0, 3, 3, 100, true, m_Flip);
 	AddAnimation("moveRight", moveRightAnimation);
+
+	SetAnimation(GetAnimation("idle"));
 }
 
 void Warrior::Draw() {
@@ -22,7 +24,7 @@ void Warrior::Draw() {
 }
 
 void Warrior::Update(float dt) {
-	m_RigidBody->Update(0.3);
+	m_RigidBody->Update(dt);
 	if (Input::GetInstance()->GetKeyDown(SDL_SCANCODE_A)) {
 		GetRigidBody()->ApplyForceX(-10.0f);
 		SetAnimation("moveLeft");

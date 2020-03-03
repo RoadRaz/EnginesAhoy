@@ -5,6 +5,7 @@
 #include "Transform.h"
 #include "Warrior.h"
 #include "Input.h"
+#include "Timer.h"
 
 Engine* Engine::s_Instance = nullptr;
 Warrior* player = nullptr;
@@ -54,8 +55,12 @@ void Engine::Quit() {
 }
 
 void Engine::Update() {
-//	SDL_Log("Update Log...");
-	player->Update(0);
+	float dt = Timer::GetInstance()->GetDeltaTime();
+	//float dt = SDL_GetTicks();
+	//std::cout << std::to_string((dt-ticks)*(60.0f/1000.0f)) << std::endl;
+	std::cout << std::to_string(dt) << std::endl;
+	//ticks = dt;
+	player->Update(dt);
 }
 
 void Engine::Render() {
