@@ -58,7 +58,7 @@ void Engine::Update() {
 	float dt = Timer::GetInstance()->GetDeltaTime();
 	//float dt = SDL_GetTicks();
 	//std::cout << std::to_string((dt-ticks)*(60.0f/1000.0f)) << std::endl;
-	std::cout << std::to_string(dt) << std::endl;
+	//std::cout << std::to_string(dt) << std::endl;
 	//ticks = dt;
 	player->Update(dt);
 }

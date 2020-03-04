@@ -2,7 +2,6 @@
 #ifndef Character_h
 #define Character_h
 #include "GameObject.h"
-#include "SDL.h"
 #include <map>
 #include <string>
 #include "Animation.h"

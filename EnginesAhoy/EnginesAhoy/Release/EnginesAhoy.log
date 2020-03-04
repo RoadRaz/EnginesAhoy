@@ -4,10 +4,9 @@ D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\GameObject.h(13,7): warning C4244
   Warrior.cpp
 D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\GameObject.h(12,7): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
 D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\GameObject.h(13,7): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\Warrior.cpp(25,25): warning C4305: 'argument': truncation from 'double' to 'float'
   Generating code
-  7 of 336 functions ( 2.1%) were compiled, the rest were copied from previous compilation.
-    3 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
+  0 of 342 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   EnginesAhoy.vcxproj -> D:\Engines\EnginesAhoy\EnginesAhoy\Release\EnginesAhoy.exe
