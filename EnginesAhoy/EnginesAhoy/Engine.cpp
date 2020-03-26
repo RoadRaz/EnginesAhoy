@@ -7,6 +7,7 @@
 #include "Input.h"
 #include "Timer.h"
 #include "MapParser.h"
+#include "Camera.h"
 
 Engine* Engine::s_Instance = nullptr;
 Warrior* player = nullptr;
@@ -16,8 +17,9 @@ bool Engine::Init() {
 		SDL_Log("Failed to initialize SDL subsystems : %s ", SDL_GetError());
 		return false;
 	}
-	
-	m_Window = SDL_CreateWindow("Engine", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, 0);
+	SDL_WindowFlags window_flags = (SDL_WindowFlags)(SDL_WINDOW_RESIZABLE | SDL_WINDOW_ALLOW_HIGHDPI);
+
+	m_Window = SDL_CreateWindow("Engine", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, window_flags);
 	
 	if (m_Window == nullptr) {
 		SDL_Log("Failed to create window : %s ", SDL_GetError());
@@ -43,7 +45,11 @@ bool Engine::Init() {
 
 	TextureManager::GetInstance()->Load("player", "Assets/Fumiko.png");
 
+	TextureManager::GetInstance()->Load("bg", "Assets/bg2.png");
+
 	player = new Warrior(new Properties("player", 500, 100, 24, 32));
+
+	Camera::GetInstance()->SetTarget(player->GetOrigin());
 
 	return m_IsRunning = true;
 }
@@ -69,12 +75,15 @@ void Engine::Update() {
 	//ticks = dt;
 	m_LevelMap->Update();
 	player->Update(dt);
+	Camera::GetInstance()->Update(dt);
 }
 
 void Engine::Render() {
 	SDL_SetRenderDrawColor(m_Renderer,124,218,254,255);
 
 	SDL_RenderClear(m_Renderer);
+
+	TextureManager::GetInstance()->Draw("bg", 0, 0, 1920, 1080);
 	m_LevelMap->Render();
 	player->Draw();
 
