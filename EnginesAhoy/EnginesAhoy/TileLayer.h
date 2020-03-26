@@ -12,7 +12,7 @@ struct Tileset {
 	std::string Name, Source;
 };
 
-using TilesetList = std::vector<Tileset*> ;
+using TilesetList = std::vector<Tileset> ;
 using TileMap = std::vector<std::vector<int> >;
 
 class TileLayer : public Layer {

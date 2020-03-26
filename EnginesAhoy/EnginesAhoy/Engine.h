@@ -3,6 +3,7 @@
 #define Engine_h
 #include <SDL.h>
 #include <SDL_image.h>
+#include "GameMap.h"
 #define SCREEN_WIDTH 1280
 #define SCREEN_HEIGHT 720
 
@@ -30,7 +31,7 @@ private:
 	Engine() {};
 
 	bool m_IsRunning;
-
+	GameMap* m_LevelMap;
 	SDL_Window* m_Window;
 	SDL_Renderer* m_Renderer;
 

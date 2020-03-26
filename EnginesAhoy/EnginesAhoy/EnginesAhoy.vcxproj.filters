@@ -54,6 +54,18 @@
     <Filter Include="Source Files\Timer">
       <UniqueIdentifier>{5feae965-40e9-4c86-86cf-92894f4981da}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Map">
+      <UniqueIdentifier>{e8cb9a97-2bae-49d5-ba92-786e38e3ff11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Map">
+      <UniqueIdentifier>{c1a3a6dd-3c94-49bd-bbc5-56199b35f2d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\TinyXML">
+      <UniqueIdentifier>{fa0143d9-619f-4b09-b8a0-7c5d88ea20e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\TinyXML">
+      <UniqueIdentifier>{c3ace1aa-4f00-4b4e-9353-891028284289}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -79,6 +91,24 @@
     </ClCompile>
     <ClCompile Include="Timer.cpp">
       <Filter>Source Files\Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="TileLayer.cpp">
+      <Filter>Source Files\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="MapParser.cpp">
+      <Filter>Source Files\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Vendor\tinyxml_2_6_2\tinystr.cpp">
+      <Filter>Source Files\TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="Vendor\tinyxml_2_6_2\tinyxml.cpp">
+      <Filter>Source Files\TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="Vendor\tinyxml_2_6_2\tinyxmlerror.cpp">
+      <Filter>Source Files\TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="Vendor\tinyxml_2_6_2\tinyxmlparser.cpp">
+      <Filter>Source Files\TinyXML</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -124,5 +154,235 @@
     <ClInclude Include="Timer.h">
       <Filter>Header Files\Timer</Filter>
     </ClInclude>
+    <ClInclude Include="Layer.h">
+      <Filter>Header Files\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="GameMap.h">
+      <Filter>Header Files\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="TileLayer.h">
+      <Filter>Header Files\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="MapParser.h">
+      <Filter>Header Files\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\tinyxml_2_6_2\tinystr.h">
+      <Filter>Header Files\TinyXML</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\tinyxml_2_6_2\tinyxml.h">
+      <Filter>Header Files\TinyXML</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Vendor\tinyxml_2_6_2\docs\annotated.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\classes.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\classTiXmlAttribute.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\classTiXmlAttribute-members.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\classTiXmlBase.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\classTiXmlBase-members.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\classTiXmlComment.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\classTiXmlComment-members.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\classTiXmlDeclaration.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\classTiXmlDeclaration-members.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\classTiXmlDocument.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\classTiXmlDocument-members.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\classTiXmlElement.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\classTiXmlElement-members.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\classTiXmlHandle.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\classTiXmlHandle-members.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\classTiXmlNode.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\classTiXmlNode-members.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\classTiXmlPrinter.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\classTiXmlPrinter-members.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\classTiXmlText.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\classTiXmlText-members.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\classTiXmlUnknown.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\classTiXmlUnknown-members.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\classTiXmlVisitor.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\classTiXmlVisitor-members.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\deprecated.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\files.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\functions.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\functions_0x6c.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\functions_0x6e.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\functions_0x6f.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\functions_0x63.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\functions_0x64.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\functions_0x65.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\functions_0x66.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\functions_0x67.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\functions_0x69.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\functions_0x70.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\functions_0x71.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\functions_0x72.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\functions_0x73.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\functions_0x74.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\functions_0x75.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\functions_0x76.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\functions_enum.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\functions_func.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\functions_func_0x6c.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\functions_func_0x6e.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\functions_func_0x63.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\functions_func_0x64.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\functions_func_0x65.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\functions_func_0x66.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\functions_func_0x67.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\functions_func_0x69.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\functions_func_0x70.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\functions_func_0x71.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\functions_func_0x72.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\functions_func_0x73.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\functions_func_0x74.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\functions_func_0x75.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\functions_func_0x76.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\functions_rela.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\functions_vars.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\hierarchy.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\index.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\pages.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\tinystr_8h_source.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\tinyxml_8h_source.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
+    <None Include="Vendor\tinyxml_2_6_2\docs\tutorial0.html">
+      <Filter>Source Files\TinyXML</Filter>
+    </None>
   </ItemGroup>
 </Project>

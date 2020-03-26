@@ -6,6 +6,7 @@
 #include "Warrior.h"
 #include "Input.h"
 #include "Timer.h"
+#include "MapParser.h"
 
 Engine* Engine::s_Instance = nullptr;
 Warrior* player = nullptr;
@@ -34,6 +35,12 @@ bool Engine::Init() {
 	SDL_GetRendererInfo(m_Renderer, &info);
 	std::cout << ("%s", info.name);
 
+	if (MapParser::GetInstance()->Load()) {
+		std::cout << "Failed to load map" << std::endl;
+	}
+
+	m_LevelMap = MapParser::GetInstance()->GetMap("level1");
+
 	TextureManager::GetInstance()->Load("player", "Assets/Fumiko.png");
 
 	player = new Warrior(new Properties("player", 500, 100, 24, 32));
@@ -60,6 +67,7 @@ void Engine::Update() {
 	//std::cout << std::to_string((dt-ticks)*(60.0f/1000.0f)) << std::endl;
 	//std::cout << std::to_string(dt) << std::endl;
 	//ticks = dt;
+	m_LevelMap->Update();
 	player->Update(dt);
 }
 
@@ -67,7 +75,7 @@ void Engine::Render() {
 	SDL_SetRenderDrawColor(m_Renderer,124,218,254,255);
 
 	SDL_RenderClear(m_Renderer);
-
+	m_LevelMap->Render();
 	player->Draw();
 
 	SDL_RenderPresent(m_Renderer);
