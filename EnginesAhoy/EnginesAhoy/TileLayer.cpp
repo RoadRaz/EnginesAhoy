@@ -41,7 +41,7 @@ void TileLayer::Render() {
 					tileColumn = ts.NumberOfColumns - 1;
 				}
 
-				TextureManager::GetInstance()->DrawTile(ts.Name, j*ts.TileWidth, i*ts.TileWidth, ts.TileWidth, ts.TileHeight, tileRow, tileColumn, SDL_FLIP_NONE);
+				TextureManager::GetInstance()->DrawTile(ts.Name, j*ts.TileWidth, i*ts.TileWidth, ts.TileWidth, ts.TileHeight, tileRow+1, tileColumn, SDL_FLIP_NONE);
 			}
 		}
 	}
