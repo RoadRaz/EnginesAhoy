@@ -3,7 +3,7 @@
 MapParser* MapParser::s_Instance = nullptr;
 
 bool MapParser::Load() {
-	return Parse("level1", "assets/Maps/map.tmx");
+	return Parse("level1", "assets/Maps/map3.tmx");
 }
 
 bool MapParser::Clean() {

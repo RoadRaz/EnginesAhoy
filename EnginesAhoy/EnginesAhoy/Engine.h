@@ -25,6 +25,7 @@ public:
 
 	inline bool IsRunning() { return m_IsRunning; }
 	inline SDL_Renderer* GetRenderer() { return m_Renderer; }
+	inline GameMap* GetMap() { return m_LevelMap; }
 
 private:
 	

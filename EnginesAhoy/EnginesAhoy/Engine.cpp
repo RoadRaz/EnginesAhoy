@@ -37,7 +37,7 @@ bool Engine::Init() {
 	SDL_GetRendererInfo(m_Renderer, &info);
 	std::cout << ("%s", info.name);
 
-	if (MapParser::GetInstance()->Load()) {
+	if (!MapParser::GetInstance()->Load()) {
 		std::cout << "Failed to load map" << std::endl;
 	}
 
@@ -47,7 +47,7 @@ bool Engine::Init() {
 
 	TextureManager::GetInstance()->Load("bg", "Assets/bg2.png");
 
-	player = new Warrior(new Properties("player", 500, 100, 24, 32));
+	player = new Warrior(new Properties("player", 500, 200, 24, 32));
 
 	Camera::GetInstance()->SetTarget(player->GetOrigin());
 

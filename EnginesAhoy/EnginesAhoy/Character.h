@@ -6,6 +6,9 @@
 #include <string>
 #include "Animation.h"
 #include "RigidBody.h"
+#include "Collider.h"
+#include "Vector2D.h"
+#include "CollisionHandler.h"
 
 class Character : public GameObject {
 public:
@@ -40,5 +43,6 @@ protected:
 	Animation* m_Animation;
 	std::string m_Name;
 	std::map<std::string, Animation*> m_AnimationMap;
+	Collider* m_Collider;
 };
 #endif // !Character_h
