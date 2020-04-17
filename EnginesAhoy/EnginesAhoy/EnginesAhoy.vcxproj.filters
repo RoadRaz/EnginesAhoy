@@ -78,6 +78,9 @@
     <Filter Include="Header Files\Collision">
       <UniqueIdentifier>{d6c41a29-1df6-42b4-9279-d909cca8063b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Particles">
+      <UniqueIdentifier>{e4b588c7-adca-4ad3-9aed-06a55f8f1b50}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -127,6 +130,12 @@
     </ClCompile>
     <ClCompile Include="CollisionHandler.cpp">
       <Filter>Source Files\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="SpriteAnimation.cpp">
+      <Filter>Source Files\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="SequenceAnimation.cpp">
+      <Filter>Source Files\Animation</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -201,6 +210,15 @@
     </ClInclude>
     <ClInclude Include="Collider.h">
       <Filter>Header Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Particle.h">
+      <Filter>Header Files\Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteAnimation.h">
+      <Filter>Header Files\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="SequenceAnimation.h">
+      <Filter>Header Files\Animation</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

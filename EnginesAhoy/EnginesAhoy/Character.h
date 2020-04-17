@@ -5,6 +5,7 @@
 #include <map>
 #include <string>
 #include "Animation.h"
+#include "SpriteAnimation.h"
 #include "RigidBody.h"
 #include "Collider.h"
 #include "Vector2D.h"

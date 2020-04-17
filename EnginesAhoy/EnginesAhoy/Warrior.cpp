@@ -17,15 +17,15 @@ Warrior::Warrior(Properties* props) : Character(props) {
 	m_RigidBody->SetGravity(3.0f);
 
 	Animation * idleAnimation = new Animation();
-	idleAnimation->SetProps(m_TextureID, 0, 17, 3, 0, 100, false, m_Flip);
+	idleAnimation->SetProps(m_TextureID, 0, 17, 3, 0, 100, false);
 	AddAnimation("idle", idleAnimation);
 	
 	Animation* moveLeftAnimation = new Animation();
-	moveLeftAnimation->SetProps(m_TextureID, 4, 0, 3, 3, 100, true, m_Flip);
+	moveLeftAnimation->SetProps(m_TextureID, 4, 0, 3, 3, 100, true);
 	AddAnimation("moveLeft", moveLeftAnimation);
 	
 	Animation* moveRightAnimation = new Animation();
-	moveRightAnimation->SetProps(m_TextureID, 2, 0, 3, 3, 100, true, m_Flip);
+	moveRightAnimation->SetProps(m_TextureID, 2, 0, 3, 3, 100, true);
 	AddAnimation("moveRight", moveRightAnimation);
 
 	SetAnimation(GetAnimation("idle"));
@@ -97,7 +97,7 @@ void Warrior::Update(float dt) {
 	m_Origin->X = m_Transform->X + m_Width / 2;
 	m_Origin->Y = m_Transform->Y + m_Height / 2;
 
-	m_Animation->Update();
+	m_Animation->Update(dt);
 }
 
 

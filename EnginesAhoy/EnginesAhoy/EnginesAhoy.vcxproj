@@ -156,6 +156,8 @@
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MapParser.cpp" />
+    <ClCompile Include="SequenceAnimation.cpp" />
+    <ClCompile Include="SpriteAnimation.cpp" />
     <ClCompile Include="TextureManager.cpp" />
     <ClCompile Include="TileLayer.cpp" />
     <ClCompile Include="Timer.cpp" />
@@ -179,9 +181,12 @@
     <ClInclude Include="IObject.h" />
     <ClInclude Include="Layer.h" />
     <ClInclude Include="MapParser.h" />
+    <ClInclude Include="Particle.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="RigidBody.h" />
+    <ClInclude Include="SequenceAnimation.h" />
+    <ClInclude Include="SpriteAnimation.h" />
     <ClInclude Include="TextureManager.h" />
     <ClInclude Include="TileLayer.h" />
     <ClInclude Include="Timer.h" />

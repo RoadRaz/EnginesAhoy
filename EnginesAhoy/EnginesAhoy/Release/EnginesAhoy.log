@@ -1,4 +1,7 @@
-﻿  Warrior.cpp
+﻿  Engine.cpp
+D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\GameObject.h(13,7): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\GameObject.h(14,7): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  Warrior.cpp
 D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\GameObject.h(13,7): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
 D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\GameObject.h(14,7): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
 D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\Warrior.cpp(39,16): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
@@ -8,8 +11,8 @@ D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\Warrior.cpp(79,29): warning C4244
 D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\Warrior.cpp(87,45): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\Warrior.cpp(87,29): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   Generating code
-  1 of 928 functions ( 0.1%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+  64 of 930 functions ( 6.9%) were compiled, the rest were copied from previous compilation.
+    39 functions were new in current compilation
+    134 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   EnginesAhoy.vcxproj -> D:\Engines\EnginesAhoy\EnginesAhoy\Release\EnginesAhoy.exe

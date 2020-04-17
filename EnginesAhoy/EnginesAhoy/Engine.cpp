@@ -43,9 +43,11 @@ bool Engine::Init() {
 
 	m_LevelMap = MapParser::GetInstance()->GetMap("level1");
 
-	TextureManager::GetInstance()->Load("player", "Assets/Fumiko.png");
+	TextureManager::GetInstance()->ParseTexture("Assets/textures.tml");
 
-	TextureManager::GetInstance()->Load("bg", "Assets/bg2.png");
+	//TextureManager::GetInstance()->Load("player", "Assets/Fumiko.png");
+
+	//TextureManager::GetInstance()->Load("bg", "Assets/bg2.png");
 
 	player = new Warrior(new Properties("player", 500, 200, 24, 32));
 
@@ -83,11 +85,15 @@ void Engine::Render() {
 
 	SDL_RenderClear(m_Renderer);
 
-	TextureManager::GetInstance()->Draw("bg", 0, 0, 1920, 1080);
+	TextureManager::GetInstance()->Draw("bg", 0, 0, 1920, 1080, 1.0f, 1.0f, 0.5f);
 	m_LevelMap->Render();
 	player->Draw();
 
 	SDL_RenderPresent(m_Renderer);
+}
+
+SDL_Rect Engine::GetViewPort() {
+	return Camera::GetInstance()->GetViewBox();
 }
 
 void Engine::Events() {
