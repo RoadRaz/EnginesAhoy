@@ -10,6 +10,7 @@ class Particle {
 public:
 
 	Particle(Transform tf, float vx, float vy, Uint32 lifetime) {
+		m_Tf = tf;
 		m_xVel = vx;
 		m_yVel = vy;
 		m_Tf.TextureID = tf.TextureID;
@@ -28,7 +29,7 @@ public:
 
 	virtual bool IsDead() {
 		const SDL_Rect vp = Engine::GetInstance()->GetViewPort();
-		return ((SDL_GetTicks() >= m_LifeTime) || (m_Tf.X < 0) || (m_Tf.Y < 0) || (m_Tf.X > vp.w) || (m_Tf.Y > vp.h));
+		return ((SDL_GetTicks() >= m_LifeTime) || (m_Tf.X < 0) || (m_Tf.Y < 0) || (m_Tf.X > vp.x+vp.w) || (m_Tf.Y > vp.y+vp.h));
 	}
 
 private:

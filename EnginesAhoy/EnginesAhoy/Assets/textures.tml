@@ -2,4 +2,7 @@
 <textures>
  <texture id="player" source="Assets/Fumiko.png"/>
  <texture id="bg" source="Assets/bg2.png"/>
+ <texture id="particle1" source="Assets/Particle1.png"/>
+ <texture id="particle2" source="Assets/Particle2.png"/>
+ <texture id="particle3" source="Assets/Particle3.png"/>
 </textures>

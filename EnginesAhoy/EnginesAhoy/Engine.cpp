@@ -8,9 +8,11 @@
 #include "Timer.h"
 #include "MapParser.h"
 #include "Camera.h"
+#include "ParticleEmitter.h"
 
 Engine* Engine::s_Instance = nullptr;
 Warrior* player = nullptr;
+ParticleEmitter* particleEmitter = nullptr;
 
 bool Engine::Init() {
 	if (SDL_Init(SDL_INIT_VIDEO) != 0 && IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG ) != 0) {
@@ -53,6 +55,8 @@ bool Engine::Init() {
 
 	Camera::GetInstance()->SetTarget(player->GetOrigin());
 
+	particleEmitter = new ParticleEmitter(DEFAULT);
+
 	return m_IsRunning = true;
 }
 
@@ -77,7 +81,9 @@ void Engine::Update() {
 	//ticks = dt;
 	m_LevelMap->Update();
 	player->Update(dt);
+	particleEmitter->UpdateParticles(dt);
 	Camera::GetInstance()->Update(dt);
+
 }
 
 void Engine::Render() {
@@ -88,8 +94,10 @@ void Engine::Render() {
 	TextureManager::GetInstance()->Draw("bg", 0, 0, 1920, 1080, 1.0f, 1.0f, 0.5f);
 	m_LevelMap->Render();
 	player->Draw();
+	particleEmitter->RenderParticles();
 
 	SDL_RenderPresent(m_Renderer);
+
 }
 
 SDL_Rect Engine::GetViewPort() {

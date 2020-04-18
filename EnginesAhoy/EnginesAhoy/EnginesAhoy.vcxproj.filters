@@ -81,6 +81,9 @@
     <Filter Include="Header Files\Particles">
       <UniqueIdentifier>{e4b588c7-adca-4ad3-9aed-06a55f8f1b50}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Helpers">
+      <UniqueIdentifier>{aef5bf25-4cbe-452f-9b92-f712c5e49788}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -219,6 +222,12 @@
     </ClInclude>
     <ClInclude Include="SequenceAnimation.h">
       <Filter>Header Files\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleEmitter.h">
+      <Filter>Header Files\Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomUtil.h">
+      <Filter>Header Files\Helpers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

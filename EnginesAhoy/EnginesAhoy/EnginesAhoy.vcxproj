@@ -182,6 +182,7 @@
     <ClInclude Include="Layer.h" />
     <ClInclude Include="MapParser.h" />
     <ClInclude Include="Particle.h" />
+    <ClInclude Include="ParticleEmitter.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="RigidBody.h" />
@@ -191,6 +192,7 @@
     <ClInclude Include="TileLayer.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="Transform.h" />
+    <ClInclude Include="RandomUtil.h" />
     <ClInclude Include="Vector2D.h" />
     <ClInclude Include="Vendor\tinyxml_2_6_2\tinystr.h" />
     <ClInclude Include="Vendor\tinyxml_2_6_2\tinyxml.h" />
