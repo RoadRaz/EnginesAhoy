@@ -6,6 +6,7 @@
 // See LICENSE in root directory for full details.
 // ----------------------------------------------------------------
 
+//************************ THIS FILE WAS BEING USED AS A REFERENCE - DOES NOT CONTRIBUTE TO THE WORKING OF THE ENGINE PROJECT ******************************//
 #include "Game.h"
 
 const int thickness = 15;
