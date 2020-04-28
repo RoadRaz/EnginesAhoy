@@ -4,14 +4,15 @@
 #include "Vector2D.h"
 #include "Transform.h"
 #include "Warrior.h"
+#include "Enemy.h"
 #include "Input.h"
 #include "Timer.h"
 #include "MapParser.h"
 #include "Camera.h"
 #include "ParticleEmitter.h"
+#include "ObjectFactory.h"
 
 Engine* Engine::s_Instance = nullptr;
-Warrior* player = nullptr;
 ParticleEmitter* particleEmitter = nullptr;
 
 bool Engine::Init() {
@@ -50,8 +51,17 @@ bool Engine::Init() {
 	//TextureManager::GetInstance()->Load("player", "Assets/Fumiko.png");
 
 	//TextureManager::GetInstance()->Load("bg", "Assets/bg2.png");
+	//Warrior* player = new Warrior(new Properties("player", 500, 200, 24, 32));
+	//Enemy* enemy = new Enemy(new Properties("player", 800, 150, 24, 32));
 
-	player = new Warrior(new Properties("player", 500, 200, 24, 32));
+	Properties* playerProperties = new Properties("player", 500, 200, 24, 32);
+	Properties* enemyProperties = new Properties("player", 800, 150, 24, 32);
+
+	GameObject* player = ObjectFactory::GetInstance()->CreateObject("player", playerProperties);
+	GameObject* enemy = ObjectFactory::GetInstance()->CreateObject("enemy", enemyProperties);
+
+	m_GameObjects.push_back(player);
+	m_GameObjects.push_back(enemy);
 
 	Camera::GetInstance()->SetTarget(player->GetOrigin());
 
@@ -62,6 +72,11 @@ bool Engine::Init() {
 
 bool Engine::Clean() {
 	TextureManager::GetInstance()->Clean();
+	for (int i = 0; i < m_GameObjects.size(); i++) {
+		//player->Draw();
+		//enemy->Draw();
+		m_GameObjects[i]->Clean();
+	}
 	SDL_DestroyRenderer(m_Renderer);
 	SDL_DestroyWindow(m_Window);
 	IMG_Quit();
@@ -80,7 +95,11 @@ void Engine::Update() {
 	//std::cout << std::to_string(dt) << std::endl;
 	//ticks = dt;
 	m_LevelMap->Update();
-	player->Update(dt);
+	for (int i = 0; i < m_GameObjects.size(); i++) {
+		//player->Update(dt);
+		//enemy->Update(dt);
+		m_GameObjects[i]->Update(dt);
+	}
 	particleEmitter->UpdateParticles(dt);
 	Camera::GetInstance()->Update(dt);
 
@@ -93,7 +112,12 @@ void Engine::Render() {
 
 	TextureManager::GetInstance()->Draw("bg", 0, 0, 1920, 1080, 1.0f, 1.0f, 0.5f);
 	m_LevelMap->Render();
-	player->Draw();
+	for (int i = 0; i < m_GameObjects.size(); i++) {
+		//player->Draw();
+		//enemy->Draw();
+		m_GameObjects[i]->Draw();
+	}
+
 	particleEmitter->RenderParticles();
 
 	SDL_RenderPresent(m_Renderer);

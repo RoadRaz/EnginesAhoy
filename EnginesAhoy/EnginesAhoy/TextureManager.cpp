@@ -55,6 +55,13 @@ void TextureManager::Draw(std::string id, int x, int y, int width, int height, f
 	SDL_RenderCopyEx(Engine::GetInstance()->GetRenderer(), m_TextureMap[id], &srcRect, &dstRect, 0, nullptr, flip);
 }
 
+void TextureManager::DrawSequenceFrame(std::string id, int x, int y, int width, int height, float scaleX, float scaleY, int xOffset, int yOffset, SDL_RendererFlip flip) {
+	SDL_Rect srcRect = { xOffset, yOffset, width, height };
+	Vector2D cam = Camera::GetInstance()->GetPosition(); //For background moving at different rate
+	SDL_Rect dstRect = { x - cam.X, y - cam.Y, width * scaleX, height * scaleY };
+	SDL_RenderCopyEx(Engine::GetInstance()->GetRenderer(), m_TextureMap[id], &srcRect, &dstRect, 0, nullptr, flip);
+}
+
 void TextureManager::QueryTexture(std::string textureId, int* width, int* height) {
 	SDL_Texture* texture = GetTexture(textureId);
 	SDL_QueryTexture(texture, NULL, NULL, width, height);

@@ -1,1 +1,34 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.Cpp.Platform.targets(67,5): error MSB8020: The build tools for v142 (Platform Toolset = 'v142') cannot be found. To build using the v142 build tools, please install v142 build tools.  Alternatively, you may upgrade to the current Visual Studio tools by selecting the Project menu or right-click the solution, and then selecting "Retarget solution".
+﻿  Animation.cpp
+D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\Animation.h(5,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  Camera.cpp
+D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\Camera.h(6,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  CollisionHandler.cpp
+D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\CollisionHandler.h(4,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  Enemy.cpp
+D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\IObject.h(4,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  Game.cpp
+D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\Game.h(10,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  Engine.cpp
+D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\Engine.h(4,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  Input.cpp
+D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\Input.h(4,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  Main.cpp
+D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\Engine.h(4,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  MapParser.cpp
+  SequenceAnimation.cpp
+D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\SequenceAnimation.h(4,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  SpriteAnimation.cpp
+D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\SpriteAnimation.h(4,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  TextureManager.cpp
+D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\TextureManager.h(6,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  TileLayer.cpp
+D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\TextureManager.h(6,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  Timer.cpp
+D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\Timer.cpp(2,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  tinystr.cpp
+  tinyxml.cpp
+  tinyxmlerror.cpp
+  tinyxmlparser.cpp
+  Warrior.cpp
+D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\IObject.h(4,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  Generating Code...

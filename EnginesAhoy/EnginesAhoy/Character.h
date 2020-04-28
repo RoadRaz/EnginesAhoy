@@ -6,6 +6,7 @@
 #include <string>
 #include "Animation.h"
 #include "SpriteAnimation.h"
+#include "SequenceAnimation.h"
 #include "RigidBody.h"
 #include "Collider.h"
 #include "Vector2D.h"

@@ -5,9 +5,13 @@
 
 //SequenceAnimation::SequenceAnimation(bool repeat) :Animation(repeat) {}
 
-void SequenceAnimation::DrawFrame(float x, float y, float xScale, float yScale, SDL_RendererFlip flip) {
-	TextureManager::GetInstance()->Draw(m_CurrentSequence.TextureIDs[m_CurrentFrame], x, y, m_CurrentSequence.Width, m_CurrentSequence.Height, xScale, yScale, flip);
+void SequenceAnimation::Draw(float x, float y, int spriteWidth = 0 , int spriteHeight = 0,  float xScale, float yScale, SDL_RendererFlip flip) {
+	TextureManager::GetInstance()->DrawSequenceFrame(m_CurrentSequence.TextureIDs[m_CurrentFrame], x, y, m_CurrentSequence.Width, m_CurrentSequence.Height, xScale, yScale,m_CurrentSequence.xOffsets[m_CurrentFrame], m_CurrentSequence.yOffsets[m_CurrentFrame], flip);
 }
+
+void SequenceAnimation::SetProps(std::string textureId, int spriteRow, int spriteColumn, int frameCount, int frameOffset, int animSpeed, bool drawFramesRowwise) {
+}
+
 
 void SequenceAnimation::Update(float dt) {
 	if (m_Repeat || m_IsEnded) {
@@ -50,6 +54,14 @@ void SequenceAnimation::Parse(std::string source) {
 
 			for (TiXmlElement* frame = e->FirstChildElement(); frame != nullptr; frame = frame->NextSiblingElement()) {
 				seq.TextureIDs.push_back(frame->Attribute("textureID"));
+				
+				int xOffset = 0;
+				frame->Attribute("xOffset", &xOffset);
+				seq.xOffsets.push_back(xOffset);
+
+				int yOffset = 0;
+				frame->Attribute("yOffset", &yOffset);
+				seq.yOffsets.push_back(yOffset);
 			}
 			m_SequenceMap[seqId] = seq;
 		}

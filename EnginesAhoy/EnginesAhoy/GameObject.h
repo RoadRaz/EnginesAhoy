@@ -38,6 +38,10 @@ public :
 
 	inline Point* GetOrigin() { return m_Origin; }
 
+	virtual void Draw() = 0;
+	virtual void Update(float dt) = 0;
+	virtual void Clean() = 0;
+
 protected:
 	Point* m_Origin;
 	Transform* m_Transform;

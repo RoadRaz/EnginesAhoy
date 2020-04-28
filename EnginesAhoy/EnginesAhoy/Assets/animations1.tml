@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<animations>
+ <sequence id="player_idle" frameCount="3" speed="100" width="24" height="32">
+  <frame textureID="player" xOffset="408" yOffset="0"/>
+  <frame textureID="player" xOffset="408" yOffset="32"/>
+  <frame textureID="player" xOffset="408" yOffset="64"/>
+ </sequence>
+ <sequence id="player_move_left" frameCount="3" speed="100" width="24" height="32">
+  <frame textureID="player" xOffset="72" yOffset="96"/>
+  <frame textureID="player" xOffset="96" yOffset="96"/>
+  <frame textureID="player" xOffset="120" yOffset="96"/>
+ </sequence>
+ <sequence id="player_move_right" frameCount="3" speed="100" width="24" height="32">
+  <frame textureID="player" xOffset="72" yOffset="32"/>
+  <frame textureID="player" xOffset="96" yOffset="32"/>
+  <frame textureID="player" xOffset="120" yOffset="32"/>
+ </sequence>
+</animations>

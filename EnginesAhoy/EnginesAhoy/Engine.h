@@ -4,6 +4,7 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include "GameMap.h"
+#include "GameObject.h"
 #define SCREEN_WIDTH 1280
 #define SCREEN_HEIGHT 720
 
@@ -39,6 +40,8 @@ private:
 	SDL_Renderer* m_Renderer;
 
 	static Engine* s_Instance;
+
+	std::vector<GameObject*> m_GameObjects;
 };
 
 #endif //Engine_h

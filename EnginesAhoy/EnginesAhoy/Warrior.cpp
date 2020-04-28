@@ -2,6 +2,9 @@
 #include "TextureManager.h"
 #include "Input.h"
 #include "Camera.h"
+#include "ObjectFactory.h"
+
+static Registrar<Warrior> registrar("player");
 
 Warrior::Warrior(Properties* props) : Character(props) {
 	m_JumpTime = JUMP_TIME;
@@ -16,15 +19,15 @@ Warrior::Warrior(Properties* props) : Character(props) {
 	m_RigidBody = new RigidBody();
 	m_RigidBody->SetGravity(3.0f);
 
-	Animation * idleAnimation = new Animation();
+	Animation * idleAnimation = new SpriteAnimation(); //Sprite animation working
 	idleAnimation->SetProps(m_TextureID, 0, 17, 3, 0, 100, false);
 	AddAnimation("idle", idleAnimation);
 	
-	Animation* moveLeftAnimation = new Animation();
+	Animation* moveLeftAnimation = new SpriteAnimation();
 	moveLeftAnimation->SetProps(m_TextureID, 4, 0, 3, 3, 100, true);
 	AddAnimation("moveLeft", moveLeftAnimation);
 	
-	Animation* moveRightAnimation = new Animation();
+	Animation* moveRightAnimation = new SpriteAnimation();
 	moveRightAnimation->SetProps(m_TextureID, 2, 0, 3, 3, 100, true);
 	AddAnimation("moveRight", moveRightAnimation);
 
