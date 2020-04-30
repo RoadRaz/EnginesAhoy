@@ -4,7 +4,11 @@
 
 Parser* Parser::s_Instance = nullptr;
 
-void Parser::ParseGameObjects(std::string source, std::vector<GameObject*> target) {
+Parser::Parser() {
+
+}
+
+void Parser::ParseGameObjects(std::string source, std::vector<GameObject*>* target) {
 
 	TiXmlDocument xml;
 	xml.LoadFile(source);
@@ -31,8 +35,8 @@ void Parser::ParseGameObjects(std::string source, std::vector<GameObject*> targe
 
 			e->Attribute("x", &x);
 			e->Attribute("y", &y);
-			e->Attribute("width", &width);
-			e->Attribute("height", &height);
+			e->Attribute("w", &width);
+			e->Attribute("h", &height);
 			e->Attribute("flip", &flip);
 			e->Attribute("category", &category);
 
@@ -50,7 +54,7 @@ void Parser::ParseGameObjects(std::string source, std::vector<GameObject*> targe
 			auto object = ObjectFactory::GetInstance()->CreateObject(objType, props);
 
 			if (object) {
-				target.push_back(std::move(object));
+				target->push_back(std::move(object));
 			}
 		}
 		std::cout << "Parsed" << std::endl;

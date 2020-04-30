@@ -10,6 +10,7 @@
 #include "MapParser.h"
 #include "Camera.h"
 #include "ParticleEmitter.h"
+#include "Parser.h"
 
 Engine* Engine::s_Instance = nullptr;
 ParticleEmitter* particleEmitter = nullptr;
@@ -54,13 +55,15 @@ bool Engine::Init() {
 	//Enemy* enemy = new Enemy(new Properties("player", 800, 150, 24, 32));
 
 	Properties* playerProperties = new Properties("player", 500, 200, 24, 32);
-	Properties* enemyProperties = new Properties("player", 800, 150, 24, 32);
+	//Properties* enemyProperties = new Properties("player", 800, 150, 24, 32);
 
 	auto player = ObjectFactory::GetInstance()->CreateObject("player", playerProperties);
-	auto enemy = ObjectFactory::GetInstance()->CreateObject("enemy", enemyProperties);
+	//auto enemy = ObjectFactory::GetInstance()->CreateObject("enemy", enemyProperties);
 
-	m_GameObjects.push_back(player);
-	m_GameObjects.push_back(enemy);
+	//m_GameObjects.push_back(player);
+	//m_GameObjects.push_back(enemy);
+
+	Parser::GetInstance()->ParseGameObjects("Assets/level1objects.tml", &m_GameObjects);
 
 	Camera::GetInstance()->SetTarget(player->GetOrigin());
 

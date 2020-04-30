@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects>
- <object type="SOBJECT" category="0" texture="tileset2" x="0" y="0" w="0" h="0" flip="0" sX="1" sY="1" sratio="0.00" rot="0"/>
- <object type="WARRIOR" category="0" texture="player" x="500" y="200" w="24" h="32" flip="0" sX="1" sY="1" sratio="1.00" rot="0"/>
+ <object type="player" category="0" texture="player" x="500" y="200" w="24" h="32" flip="0" sX="1" sY="1" sratio="1.00" rot="0"/>
+ <object type="enemy" category="0" texture="player" x="800" y="200" w="24" h="32" flip="0" sX="1" sY="1" sratio="1.00" rot="0"/>
+ <object type="enemy" category="0" texture="player" x="1000" y="200" w="24" h="32" flip="0" sX="1" sY="1" sratio="1.00" rot="0"/>
 </objects>
