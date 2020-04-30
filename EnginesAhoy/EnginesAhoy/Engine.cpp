@@ -10,7 +10,6 @@
 #include "MapParser.h"
 #include "Camera.h"
 #include "ParticleEmitter.h"
-#include "ObjectFactory.h"
 
 Engine* Engine::s_Instance = nullptr;
 ParticleEmitter* particleEmitter = nullptr;
@@ -57,8 +56,8 @@ bool Engine::Init() {
 	Properties* playerProperties = new Properties("player", 500, 200, 24, 32);
 	Properties* enemyProperties = new Properties("player", 800, 150, 24, 32);
 
-	GameObject* player = ObjectFactory::GetInstance()->CreateObject("player", playerProperties);
-	GameObject* enemy = ObjectFactory::GetInstance()->CreateObject("enemy", enemyProperties);
+	auto player = ObjectFactory::GetInstance()->CreateObject("player", playerProperties);
+	auto enemy = ObjectFactory::GetInstance()->CreateObject("enemy", enemyProperties);
 
 	m_GameObjects.push_back(player);
 	m_GameObjects.push_back(enemy);
@@ -130,4 +129,18 @@ SDL_Rect Engine::GetViewPort() {
 
 void Engine::Events() {
 	Input::GetInstance()->Listen();
+}
+
+void Engine::PopState() {
+	m_CurrentState = m_GameStates.back();
+	m_GameStates.pop_back();
+}
+
+void Engine::PushState(GameState* current) {
+	m_GameStates.push_back(current);
+}
+
+void Engine::ChangeState(GameState* target) {
+	PushState(m_CurrentState);
+	m_CurrentState = target;
 }

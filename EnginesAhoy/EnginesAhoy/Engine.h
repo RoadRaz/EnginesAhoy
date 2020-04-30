@@ -5,6 +5,8 @@
 #include <SDL_image.h>
 #include "GameMap.h"
 #include "GameObject.h"
+#include "GameState.h"
+#include "ObjectFactory.h"
 #define SCREEN_WIDTH 1280
 #define SCREEN_HEIGHT 720
 
@@ -24,6 +26,10 @@ public:
 	void Render();
 	void Events();
 
+	void PopState();
+	void PushState(GameState* current);
+	void ChangeState(GameState* target);
+
 	SDL_Rect GetViewPort();
 
 	inline bool IsRunning() { return m_IsRunning; }
@@ -42,6 +48,10 @@ private:
 	static Engine* s_Instance;
 
 	std::vector<GameObject*> m_GameObjects;
+
+	std::vector<GameState*> m_GameStates;
+
+	GameState* m_CurrentState;
 };
 
 #endif //Engine_h

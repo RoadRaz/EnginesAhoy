@@ -11,6 +11,7 @@
 #include "Collider.h"
 #include "Vector2D.h"
 #include "CollisionHandler.h"
+#include "Transform.h"
 
 class Character : public GameObject {
 public:

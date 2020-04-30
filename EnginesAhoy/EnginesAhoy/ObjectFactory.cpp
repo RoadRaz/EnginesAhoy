@@ -4,7 +4,7 @@
 
 ObjectFactory* ObjectFactory::s_Instance = nullptr;
 
-void ObjectFactory::RegisterType(std::string className, std::function<GameObject * (Properties * props)> type) {
+void ObjectFactory::RegisterType(std::string className, std::function<GameObject*(Properties* props)> type) {
 	m_TypeRegistry[className] = type;
 }
 

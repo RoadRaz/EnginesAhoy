@@ -19,6 +19,8 @@ Warrior::Warrior(Properties* props) : Character(props) {
 	m_RigidBody = new RigidBody();
 	m_RigidBody->SetGravity(3.0f);
 
+	//m_TextureID = "player";
+
 	Animation * idleAnimation = new SpriteAnimation(); //Sprite animation working
 	idleAnimation->SetProps(m_TextureID, 0, 17, 3, 0, 100, false);
 	AddAnimation("idle", idleAnimation);

@@ -23,6 +23,10 @@ public :
 	inline TileMap GetTileMap() {
 		return m_Tilemap;
 	}
+	inline int GetTileHeight() { return m_TileHeight; }
+	inline int GetTileWidth() { return m_TileWidth; }
+	inline int GetRowCount() { return m_NumberOfRows; }
+	inline int GetColCount() { return m_NumberOfColumns; }
 
 private:
 	int m_TileHeight, m_TileWidth;
