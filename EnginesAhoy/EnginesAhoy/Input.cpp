@@ -20,8 +20,45 @@ void Input::Listen() {
 			case SDL_KEYUP:
 				KeyUp();
 				break;
+			case SDL_MOUSEBUTTONDOWN:
+				mouseLeftButtonDown = (event.button.button == SDL_BUTTON_LEFT);
+				mouseRightButtonDown = (event.button.button == SDL_BUTTON_RIGHT);
+				mouseRightButtonUp = false;
+				mouseLeftButtonUp = false;
+				break;
+			case SDL_MOUSEBUTTONUP:
+				mouseLeftButtonUp = (event.button.button == SDL_BUTTON_LEFT);
+				mouseRightButtonUp = (event.button.button == SDL_BUTTON_RIGHT);
+				mouseRightButtonDown = false;
+				mouseLeftButtonDown = false;
 		}
 	}
+}
+
+
+
+bool Input::GetMouseButtonDownLeft() {
+	return mouseLeftButtonDown;
+}
+
+bool Input::GetMouseButtonDownRight() {
+	return mouseRightButtonDown;
+}
+
+bool Input::GetMouseButtonUpLeft() {
+	return mouseLeftButtonUp;
+}
+
+bool Input::GetMouseButtonUpRight() {
+	return mouseRightButtonUp;
+}
+
+Vector2D Input::GetMousePosition() {
+	int x =0, y=0;
+	SDL_PumpEvents();
+	SDL_GetMouseState(&x, &y);
+	Vector2D mousePos = Vector2D(x,y);
+	return mousePos;
 }
 
 bool Input::GetKeyDown(SDL_Scancode key) {

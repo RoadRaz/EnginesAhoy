@@ -102,6 +102,9 @@
     <Filter Include="Source Files\Parser">
       <UniqueIdentifier>{dc744824-93db-4682-919b-e4ca9948fcf4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\UI">
+      <UniqueIdentifier>{9c862365-278e-44fa-822b-25d1edb22b46}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -276,6 +279,9 @@
     </ClInclude>
     <ClInclude Include="Parser.h">
       <Filter>Header Files\Parser</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Header Files\UI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

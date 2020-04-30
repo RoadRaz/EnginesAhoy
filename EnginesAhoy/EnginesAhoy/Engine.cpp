@@ -11,6 +11,7 @@
 #include "Camera.h"
 #include "ParticleEmitter.h"
 #include "Parser.h"
+#include "Button.h"
 
 Engine* Engine::s_Instance = nullptr;
 ParticleEmitter* particleEmitter = nullptr;
@@ -54,10 +55,10 @@ bool Engine::Init() {
 	//Warrior* player = new Warrior(new Properties("player", 500, 200, 24, 32));
 	//Enemy* enemy = new Enemy(new Properties("player", 800, 150, 24, 32));
 
-	Properties* playerProperties = new Properties("player", 500, 200, 24, 32);
+	//Properties* playerProperties = new Properties("player", 500, 200, 24, 32);
 	//Properties* enemyProperties = new Properties("player", 800, 150, 24, 32);
 
-	auto player = ObjectFactory::GetInstance()->CreateObject("player", playerProperties);
+	//auto player = ObjectFactory::GetInstance()->CreateObject("player", playerProperties);
 	//auto enemy = ObjectFactory::GetInstance()->CreateObject("enemy", enemyProperties);
 
 	//m_GameObjects.push_back(player);
@@ -65,7 +66,11 @@ bool Engine::Init() {
 
 	Parser::GetInstance()->ParseGameObjects("Assets/level1objects.tml", &m_GameObjects);
 
-	Camera::GetInstance()->SetTarget(player->GetOrigin());
+	Button* button1 = new Button(20, 20, nullptr, { "button_idle", "button_hover", "button_pressed" });
+
+	m_GameObjects.push_back(button1);
+
+	Camera::GetInstance()->SetTarget(m_GameObjects[0]->GetOrigin()); //Player object needs to be on top of objects list for camera to follow it
 
 	particleEmitter = new ParticleEmitter(DEFAULT);
 

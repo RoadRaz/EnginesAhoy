@@ -5,4 +5,7 @@
  <texture id="particle1" source="Assets/Particle1.png"/>
  <texture id="particle2" source="Assets/Particle2.png"/>
  <texture id="particle3" source="Assets/Particle3.png"/>
+ <texture id="button_idle" source="Assets/button_normal.png"/>
+ <texture id="button_hover" source="Assets/button_hover.png"/>
+ <texture id="button_pressed" source="Assets/button_click.png"/>
 </textures>

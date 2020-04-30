@@ -2,6 +2,7 @@
 #ifndef Input_h
 #define Input_h
 #include "SDL.h"
+#include "Vector2D.h"
 
 class Input {
 public:
@@ -15,6 +16,14 @@ public:
 
 	bool GetKeyUp(SDL_Scancode key);
 
+	Vector2D GetMousePosition();
+
+	bool GetMouseButtonDownLeft();
+	bool GetMouseButtonDownRight();
+
+	bool GetMouseButtonUpLeft();
+	bool GetMouseButtonUpRight();
+
 private:
 	Input();
 	void KeyUp();
@@ -23,6 +32,10 @@ private:
 private:
 	static Input* s_Instance;
 	const Uint8* m_KeyStates;
+	bool mouseLeftButtonUp = true;
+	bool mouseLeftButtonDown = false;
+	bool mouseRightButtonUp = true;
+	bool mouseRightButtonDown = false;
 
 };
 #endif // !Input_h

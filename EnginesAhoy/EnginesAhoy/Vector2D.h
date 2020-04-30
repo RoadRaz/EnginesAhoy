@@ -14,6 +14,11 @@ public:
 		Y = y;
 	}
 
+	Vector2D(int x, int y) {
+		X = (float)x;
+		Y = (float)y;
+	}
+
 	Vector2D() {
 		X = 0;
 		Y = 0;

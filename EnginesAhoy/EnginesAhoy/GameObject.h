@@ -18,6 +18,8 @@ public:
 
 	}
 
+	Properties() {};
+
 public:
 	std::string TextureID;
 	int Width, Height;
