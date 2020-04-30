@@ -105,6 +105,12 @@
     <Filter Include="Header Files\UI">
       <UniqueIdentifier>{9c862365-278e-44fa-822b-25d1edb22b46}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Sound">
+      <UniqueIdentifier>{51bc4158-51a3-41f8-939d-4123798e73b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sound">
+      <UniqueIdentifier>{95d6e19c-c188-47e9-83b2-6d9b2597187c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -172,6 +178,9 @@
     </ClCompile>
     <ClCompile Include="Parser.cpp">
       <Filter>Source Files\Parser</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundManager.cpp">
+      <Filter>Source Files\Sound</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -282,6 +291,9 @@
     </ClInclude>
     <ClInclude Include="Button.h">
       <Filter>Header Files\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundManager.h">
+      <Filter>Header Files\Sound</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

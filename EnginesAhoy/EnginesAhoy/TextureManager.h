@@ -11,9 +11,8 @@ public:
 	static TextureManager* GetInstance() {
 		return s_Instance = (s_Instance != nullptr) ? s_Instance : new TextureManager(); 
 	}
-
+	
 	bool Load(std::string id, std::string filename);
-	bool ParseTexture(std::string source);
 	void QueryTexture(std::string textureId, int* width, int* height);
 	inline SDL_Texture* GetTexture(std::string textureId) { return m_TextureMap[textureId]; };
 	void Drop(std::string id);

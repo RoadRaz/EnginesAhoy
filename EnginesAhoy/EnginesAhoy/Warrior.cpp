@@ -3,6 +3,7 @@
 #include "Input.h"
 #include "Camera.h"
 #include "ObjectFactory.h"
+#include "SoundManager.h"
 
 static Registrar<Warrior> registrar("player");
 
@@ -63,6 +64,7 @@ void Warrior::Update(float dt) {
 
 	//Jump
 	if (Input::GetInstance()->GetKeyDown(SDL_SCANCODE_W) && m_IsGrounded) {
+		SoundManager::GetInstance()->PlayEffect("sound4");
 		m_IsJumping = true;
 		m_IsGrounded = false;
 		m_RigidBody->ApplyForceY(-1 * m_JumpForce);

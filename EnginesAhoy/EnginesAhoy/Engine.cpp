@@ -12,6 +12,7 @@
 #include "ParticleEmitter.h"
 #include "Parser.h"
 #include "Button.h"
+#include "SoundManager.h"
 
 Engine* Engine::s_Instance = nullptr;
 ParticleEmitter* particleEmitter = nullptr;
@@ -47,7 +48,10 @@ bool Engine::Init() {
 
 	m_LevelMap = MapParser::GetInstance()->GetMap("level1");
 
-	TextureManager::GetInstance()->ParseTexture("Assets/textures.tml");
+	Parser::GetInstance()->ParseTexture("Assets/textures.tml");
+	Parser::GetInstance()->ParseSounds("Assets/sounds.tml");
+
+	SoundManager::GetInstance()->PlayMusik("music1");
 
 	//TextureManager::GetInstance()->Load("player", "Assets/Fumiko.png");
 

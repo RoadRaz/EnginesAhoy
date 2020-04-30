@@ -12,6 +12,8 @@ public:
 
 	bool ParseTexture(std::string source);
 
+	bool ParseSounds(std::string source);
+
 	TileLayer* ParseTileLayer(TiXmlElement* xmlLayer, TilesetList tilesets, int tileHeight, int tileWidth, int rowCount, int columnCount);
 
 private:

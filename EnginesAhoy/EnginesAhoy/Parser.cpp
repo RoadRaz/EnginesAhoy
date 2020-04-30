@@ -1,11 +1,39 @@
 #include "Parser.h"
 #include "Transform.h"
 #include "TextureManager.h"
+#include "SoundManager.h"
 
 Parser* Parser::s_Instance = nullptr;
 
 Parser::Parser() {
 
+}
+
+bool Parser::ParseSounds(std::string source) {
+
+	TiXmlDocument xml;
+	xml.LoadFile(source);
+
+	if (xml.Error()) {
+		std::cout << "Failed to load sounds file" << std::endl;
+		return false;
+	}
+
+	TiXmlElement* root = xml.RootElement();
+
+	for (TiXmlElement* e = root->FirstChildElement(); e != nullptr; e = e->NextSiblingElement()) {
+
+		if (e->Value() == std::string("effect")) {
+			SoundManager::GetInstance()->LoadEffect(e->Attribute("id"), e->Attribute("source"));
+			continue;
+		}
+		if (e->Value() == std::string("music")) {
+			SoundManager::GetInstance()->LoadMusik(e->Attribute("id"), e->Attribute("source"));
+			continue;
+		}
+	}
+	std::cout << "Parsed music files" << std::endl;
+	return true;
 }
 
 void Parser::ParseGameObjects(std::string source, std::vector<GameObject*>* target) {
@@ -14,7 +42,7 @@ void Parser::ParseGameObjects(std::string source, std::vector<GameObject*>* targ
 	xml.LoadFile(source);
 
 	if (xml.Error()) {
-		std::cout << "Unable to parse Game Objects" << std::endl;
+		std::cout << "Failed to load gameobjects file" << std::endl;
 		return;
 	}
 
@@ -62,6 +90,24 @@ void Parser::ParseGameObjects(std::string source, std::vector<GameObject*>* targ
 }
 
 bool Parser::ParseTexture(std::string source) {
+	TiXmlDocument xml;
+	xml.LoadFile(source);
+	if (xml.Error()) {
+		std::cout << "Failed to load " << source << std::endl;
+		return false;
+	}
+
+	TiXmlElement* root = xml.RootElement();
+	for (TiXmlElement* e = root->FirstChildElement(); e != nullptr; e = e->NextSiblingElement()) {
+		if (e->Value() == std::string("texture")) {
+			std::string id = e->Attribute("id");
+			std::string src = e->Attribute("source");
+			TextureManager::GetInstance()->Load(id, src);
+			std::cout << "Texture Parsed Successfully : " << src << std::endl;
+		}
+	}
+
+	return true;
 }
 
 //TileMap* Parser::ParseMap(std::string source) {

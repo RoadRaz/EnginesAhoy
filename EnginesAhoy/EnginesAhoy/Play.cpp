@@ -7,7 +7,7 @@ bool Play::Init() {
 	m_Ctxt = Engine::GetInstance()->GetRenderer();
 
 	m_LevelMap = MapParser::GetInstance()->GetMap("level1");
-	TextureManager::GetInstance()->ParseTexture("Assets/textures.tml");
+	Parser::GetInstance()->ParseTexture("Assets/textures.tml");
 
 	TileLayer* collissionLayer = (TileLayer*)m_LevelMap->GetMapLayers().back();
 

@@ -16,6 +16,7 @@
 #include "ObjectFactory.h"
 #include "TextureManager.h"
 #include "CollisionHandler.h"
+#include "Parser.h"
 
 class Play : public GameState{
 public:
