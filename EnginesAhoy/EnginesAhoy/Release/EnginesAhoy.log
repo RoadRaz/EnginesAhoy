@@ -19,10 +19,9 @@ D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\Button.h(62,64): warning C4244: '
 D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\Engine.cpp(90,20): warning C4018: '<': signed/unsigned mismatch
 D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\Engine.cpp(113,20): warning C4018: '<': signed/unsigned mismatch
 D:\Engines\EnginesAhoy\EnginesAhoy\EnginesAhoy\Engine.cpp(130,20): warning C4018: '<': signed/unsigned mismatch
-  EngineTest.cpp
   Generating code
-  610 of 1459 functions (41.8%) were compiled, the rest were copied from previous compilation.
-    63 functions were new in current compilation
-    169 functions had inline decision re-evaluated but remain unchanged
+  1 of 1459 functions (<0.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   EnginesAhoy.vcxproj -> D:\Engines\EnginesAhoy\EnginesAhoy\Release\EnginesAhoy.exe
