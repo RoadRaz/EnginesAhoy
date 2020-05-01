@@ -2,11 +2,11 @@
 #include "TextureManager.h"
 
 TileLayer::TileLayer(int tileHeight, int tileWidth, int numberOfRows, int numberOfColumns, TileMap tileMap, TilesetList tilesetList): m_TileSets(tilesetList), m_NumberOfColumns(numberOfColumns), m_NumberOfRows(numberOfRows),m_Tilemap(tileMap){
-	//m_TileHeight = tileHeight;
-	//m_TileWidth = tileWidth;
-	//m_NumberOfRows = numberOfRows;
-	//m_NumberOfColumns = numberOfColumns;
-	//m_Tilemap = tileMap;
+	m_TileHeight = tileHeight;
+	m_TileWidth = tileWidth;
+	m_NumberOfRows = numberOfRows;
+	m_NumberOfColumns = numberOfColumns;
+	m_Tilemap = tileMap;
 
 	for (unsigned int i = 0; i < m_TileSets.size(); i++) {
 		TextureManager::GetInstance()->Load(m_TileSets[i].Name, "assets/maps/" + m_TileSets[i].Source);

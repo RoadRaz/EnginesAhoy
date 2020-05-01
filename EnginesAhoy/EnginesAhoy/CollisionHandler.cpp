@@ -8,6 +8,11 @@ CollisionHandler::CollisionHandler() {
 	m_CollisionTileMap = m_CollisionLayer->GetTileMap();
 }
 
+void CollisionHandler::SetCollisionLayer(GameMap* gameMap) {
+	m_CollisionLayer = (TileLayer*)gameMap->GetMapLayers().front();
+	m_CollisionTileMap = m_CollisionLayer->GetTileMap();
+}
+
 void CollisionHandler::SetCollisionMap(TileMap tileMap, int tileHeight, int tileWidth, int numberOfRows, int numberOfColumns) {
 	m_CollisionTileMap = tileMap;
 	m_tileHeight = tileHeight;

@@ -42,16 +42,20 @@ bool Engine::Init() {
 	SDL_GetRendererInfo(m_Renderer, &info);
 	std::cout << ("%s", info.name);
 
-	if (!MapParser::GetInstance()->Load()) {
+	if (!MapParser::GetInstance()->Load(1)) {
 		std::cout << "Failed to load map" << std::endl;
 	}
 
-	m_LevelMap = MapParser::GetInstance()->GetMap("level1");
+	if (!MapParser::GetInstance()->Load(2)) {
+		std::cout << "Failed to load map" << std::endl;
+	}
+
+	m_LevelMap = MapParser::GetInstance()->GetMap("level2");
 
 	Parser::GetInstance()->ParseTexture("Assets/textures.tml");
 	Parser::GetInstance()->ParseSounds("Assets/sounds.tml");
 
-	SoundManager::GetInstance()->PlayMusik("music1");
+	SoundManager::GetInstance()->PlayMusik("music2");
 
 	//TextureManager::GetInstance()->Load("player", "Assets/Fumiko.png");
 
@@ -68,7 +72,7 @@ bool Engine::Init() {
 	//m_GameObjects.push_back(player);
 	//m_GameObjects.push_back(enemy);
 
-	Parser::GetInstance()->ParseGameObjects("Assets/level1objects.tml", &m_GameObjects);
+	Parser::GetInstance()->ParseGameObjects("Assets/level2objects.tml", &m_GameObjects);
 
 	Button* button1 = new Button(20, 20, nullptr, { "button_idle", "button_hover", "button_pressed" });
 

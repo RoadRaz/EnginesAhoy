@@ -2,10 +2,25 @@
 
 MapParser* MapParser::s_Instance = nullptr;
 
-bool MapParser::Load() {
-	return Parse("level1", "assets/Maps/map3.tmx");
-}
+//bool MapParser::Load() {
+//	if (Parse("level1", "Assets/Maps/map3.tmx") && Parse("level2", "Assets/Maps/map4.tmx")) {
+//		return true;
+//	}
+//	else {
+//		std::cout << "Unable to parse level maps" << std::endl;
+//		return false;
+//	}
+//}
 
+bool MapParser::Load(int level) {
+	if (level == 1) {
+		Parse("level1", "Assets/Maps/map3.tmx");
+	}
+	else if (level == 2) {
+		Parse("level2", "Assets/Maps/map4.tmx");
+	}
+	return true;
+}
 bool MapParser::Clean() {
 	std::map<std::string, GameMap*>::iterator it;
 	for (it = m_MapDict.begin(); it != m_MapDict.end(); it++) {

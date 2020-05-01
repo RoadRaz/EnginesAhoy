@@ -111,6 +111,12 @@
     <Filter Include="Source Files\Sound">
       <UniqueIdentifier>{95d6e19c-c188-47e9-83b2-6d9b2597187c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\LevelManager">
+      <UniqueIdentifier>{f13f2387-57e5-4868-b1fd-b0e3b8a4571a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\LevelManager">
+      <UniqueIdentifier>{9a46716a-5822-4e29-900e-2687b791953d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -181,6 +187,12 @@
     </ClCompile>
     <ClCompile Include="SoundManager.cpp">
       <Filter>Source Files\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelManager.cpp">
+      <Filter>Source Files\LevelManager</Filter>
+    </ClCompile>
+    <ClCompile Include="EngineTest.cpp">
+      <Filter>Source Files\Core</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -294,6 +306,9 @@
     </ClInclude>
     <ClInclude Include="SoundManager.h">
       <Filter>Header Files\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelManager.h">
+      <Filter>Header Files\LevelManager</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

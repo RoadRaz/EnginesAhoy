@@ -5,4 +5,5 @@
  <effect id="sound3" source="Assets/Sounds/coin2.wav"/>
  <effect id="sound4" source="Assets/Sounds/coin3.wav"/>
  <music id="music1" source="Assets/Sounds/music1.wav"/>
+ <music id="music2" source="Assets/Sounds/music2.wav"/>
 </sounds>

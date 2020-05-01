@@ -152,9 +152,11 @@
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="CollisionHandler.cpp" />
     <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="EngineTest.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="Input.cpp" />
+    <ClCompile Include="LevelManager.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MapParser.cpp" />
     <ClCompile Include="ObjectFactory.cpp" />
@@ -188,6 +190,7 @@
     <ClInclude Include="Input.h" />
     <ClInclude Include="IObject.h" />
     <ClInclude Include="Layer.h" />
+    <ClInclude Include="LevelManager.h" />
     <ClInclude Include="MapParser.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="ObjectFactory.h" />

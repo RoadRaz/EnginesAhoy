@@ -12,6 +12,8 @@ public:
 	bool CheckCollision(SDL_Rect a, SDL_Rect b);
 	bool MapCollision(SDL_Rect a);
 
+	void SetCollisionLayer(GameMap* gameMap);
+
 	void SetCollisionMap(TileMap tileMap, int tileHeight, int tileWidth, int numberOfRows, int numberOfColumns);
 
 	inline static CollisionHandler* GetInstance() { return s_Instance = (s_Instance != nullptr) ? s_Instance : new CollisionHandler(); }
