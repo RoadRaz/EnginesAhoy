@@ -64,6 +64,10 @@ public:
 			return;
 		}
 
+		if (new_seg_x < 0 || new_seg_y < 0) {
+			return;
+		}
+
 		if (new_seg_x != old_seg_x || new_seg_y != old_seg_y) {
 			RemoveFromSegment(part, old_seg_x, old_seg_y);
 			if (new_seg_x < 10 && new_seg_y < 10) {
@@ -78,6 +82,7 @@ public:
 		if (!checkCollisions) {
 			return;
 		}
+		//std::cout << segment[x][y].size() << std::endl;
 		auto it = std::find(segment[x][y].begin(), segment[x][y].end(), part);
 		if (it != segment[x][y].end()) {
 			segment[x][y].erase(it);

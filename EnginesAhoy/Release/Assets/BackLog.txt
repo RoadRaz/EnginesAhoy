@@ -1,0 +1,29 @@
+Figure out solutions:
+
+Inheritance for animations and rigidbody
+	- Currently in character. Move up or down? Objects maybe
+	- 3D and 2D objects?
+		- Need implementation for other dependencies in 3D
+
+Remove SDL?
+	- Should be done before moving too far forward
+	- Reimplement all SDL calls with C++
+
+Why use SDL?
+	- Reviews are bad
+	- Image functions not thread safe (supposedly), and thread safety is important
+
+Pending work (before 3D):
+	- Maps, Layers
+		- Editor
+		- Parser
+	- Camera and Viewport
+	- UI
+		- Object Management
+		- Map and tiles
+		- Camera and viewport
+		- 
+	- Collision 2D
+	- States
+		- Player States
+		- Game States
